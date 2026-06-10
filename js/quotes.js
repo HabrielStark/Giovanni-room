@@ -1,8 +1,8 @@
 // Quote card data + collectible 3D cards + overlay + journal.
-// Citation rule: page numbers are never invented — every card states the edition note.
+// Citation rule: page numbers must come from the physical class copy of the novel.
 import * as THREE from 'three';
 
-const PAGE_NOTE = 'Page number depends on edition';
+const PAGE_NOTE = 'Baldwin, p. ___';
 
 export const QUOTES = {
   q1: {
@@ -10,14 +10,14 @@ export const QUOTES = {
     text: 'Watching his reflection in the darkening windowpane, David thinks that people say he looks like a man with nothing to hide — and that they are wrong: his ordinary, trustworthy face conceals everything.',
     scene: 'Scene 1 — The House in the South of France',
     chapter: 'Part One, Chapter One',
-    meaning: 'From the first page David\u2019s identity is split in two: an acceptable surface and a hidden self. The whole novel measures the cost of that concealment.',
+    meaning: 'From the first page David’s identity is split in two: an acceptable surface and a hidden self. The whole novel measures the cost of that concealment.',
   },
   q2: {
     kind: 'Paraphrase',
     text: 'The whole story is told in a single night: David waits alone in a rented house in the south of France, and at dawn, in Paris, Giovanni will be executed by the guillotine.',
     scene: 'Scene 1 — The House in the South of France',
     chapter: 'Part One, Chapter One',
-    meaning: 'Baldwin frames the memory with its consequence. Before the story even \u201cbegins,\u201d David\u2019s refusal to express his true self has already cost a life.',
+    meaning: 'Baldwin frames the memory with its consequence. Before the story even “begins,” David’s refusal to express his true self has already cost a life.',
   },
   q3: {
     kind: 'Paraphrase',
@@ -28,52 +28,52 @@ export const QUOTES = {
   },
   q4: {
     kind: 'Paraphrase',
-    text: 'David\u2019s father insists that all he wants is for his son to grow up to be a real man — and by \u201ca man\u201d he certainly does not mean a Sunday-school teacher. Yet he never once asks who David actually is.',
+    text: 'David’s father insists that all he wants is for his son to grow up to be a real man. Yet he never really asks who David is inside, only whether David can perform the role expected of him.',
     scene: 'Scene 2 — Childhood Memory: Father',
     chapter: 'Part One, Chapter One',
-    meaning: 'Manhood, in David\u2019s home, is a performance to be delivered, not an identity to be discovered. The pressure to act a part follows David across the ocean.',
+    meaning: 'Manhood, in David’s home, is a performance to be delivered, not an identity to be discovered. The pressure to act a part follows David across the ocean.',
   },
   q5: {
     kind: 'Paraphrase',
-    text: 'Jacques tells David he can love Giovanni and let Giovanni love him — that nothing else under heaven really matters — but warns that if David is ashamed and insists on playing it safe, he will end up locked away in his own dirty body, forever, having loved no one.',
-    scene: 'Scene 3 — Guillaume\u2019s Bar',
+    text: 'Jacques warns David that love can only become real if David stops treating it as shameful. If David keeps choosing safety over honesty, he will end up alone, unable to truly love anyone.',
+    scene: 'Scene 3 — Guillaume’s Bar',
     chapter: 'Part One, Chapter Three',
-    meaning: 'Jacques names the novel\u2019s central choice: love expressed without shame can ennoble, but love denied out of shame imprisons. David hears the warning — and ignores it.',
+    meaning: 'Jacques names the novel’s central choice: love expressed without shame can ennoble, but love denied out of shame imprisons. David hears the warning — and ignores it.',
   },
   q6: {
     kind: 'Paraphrase',
-    text: 'From the moment David sees Giovanni behind the bar — dark, confident, magnetic — the evening sharpens. Talking with him feels like a light switched on in a dim room, and David\u2019s careful, managed self begins to slip.',
-    scene: 'Scene 3 — Guillaume\u2019s Bar',
+    text: 'From the moment David sees Giovanni behind the bar, the evening changes. Talking with Giovanni feels alive and dangerous because David’s careful, controlled self begins to slip.',
+    scene: 'Scene 3 — Guillaume’s Bar',
     chapter: 'Part One, Chapter Two',
     meaning: 'Genuine feeling arrives like illumination: with Giovanni, David briefly stops performing. The meeting shows the self David could express — and will spend the novel running from.',
   },
   q7: {
     kind: 'Paraphrase',
-    text: 'David remembers that life in Giovanni\u2019s room seemed to be happening beneath the sea: time flowed past indifferently above them, hours and days lost their meaning, and he felt a sea-change in himself — as if his very identity were being altered inside those four walls.',
-    scene: 'Scene 4 — Giovanni\u2019s Room',
+    text: 'David remembers that life in Giovanni’s room felt separated from the outside world. Time lost its normal shape there, and David felt himself changing inside those four walls.',
+    scene: 'Scene 4 — Giovanni’s Room',
     chapter: 'Part Two, Chapter One',
-    meaning: 'The room is the one place where David\u2019s true self surfaces — which is exactly why it terrifies him. Becoming himself feels to David like drowning.',
+    meaning: 'The room is the one place where David’s true self surfaces — which is exactly why it terrifies him. Becoming himself feels to David like drowning.',
   },
   q8: {
     kind: 'Paraphrase',
-    text: 'Giovanni has painted over the windowpanes, so the room admits only a milky, hidden light and no one can see in. The room keeps the world out — and keeps what happens inside it secret, like David\u2019s own heart.',
-    scene: 'Scene 4 — Giovanni\u2019s Room',
+    text: 'Giovanni has painted over the windowpanes, so the room keeps the outside world away and keeps what happens inside hidden.',
+    scene: 'Scene 4 — Giovanni’s Room',
     chapter: 'Part Two, Chapter Two',
-    meaning: 'The whitened windows are the novel\u2019s image of the closet: love that must be hidden from the world slowly suffocates the people inside it.',
+    meaning: 'The whitened windows show secrecy and isolation: love that must be hidden from the world slowly suffocates the people inside it.',
   },
   q9: {
     kind: 'Paraphrase',
-    text: 'Hella comes back from Spain having decided she wants an ordinary, settled life — marriage, children, a place in the world defined by a husband — and David clings to her as proof that he can still be the man everyone expects.',
-    scene: 'Scene 5 — Hella\u2019s Return',
+    text: 'Hella comes back from Spain wanting an ordinary, settled life — marriage, children, and a clear place in the world — and David clings to her as proof that he can still be the man everyone expects.',
+    scene: 'Scene 5 — Hella’s Return',
     chapter: 'Part Two, Chapter Four',
     meaning: 'Hella stands for the safe, conventional future. David does not choose her out of love but out of fear — using her life as a shield against his own.',
   },
   q10: {
     kind: 'Paraphrase',
-    text: 'On the morning of the execution, David tears up the blue envelope announcing Giovanni\u2019s death and steps out into the wind — and the wind blows some of the torn pieces back onto him.',
+    text: 'On the morning of Giovanni’s execution, David tears up the letter about Giovanni’s death, but the wind blows some of the torn pieces back onto him.',
     scene: 'Scene 5 — The Choice',
     chapter: 'Part Two, Chapter Five',
-    meaning: 'The novel\u2019s last image: guilt cannot be torn up and thrown away. The consequences of a denied identity return to David no matter how he tries to scatter them.',
+    meaning: 'The novel’s last image: guilt cannot be torn up and thrown away. The consequences of a denied identity return to David no matter how he tries to scatter them.',
   },
 };
 
@@ -137,7 +137,7 @@ export class QuoteSystem {
   showOverlay(id, onClose) {
     const q = QUOTES[id];
     this.els.kind.textContent = q.kind;
-    this.els.text.textContent = '\u201C' + q.text + '\u201D';
+    this.els.text.textContent = q.kind === 'Direct Quote' ? '“' + q.text + '”' : q.text;
     this.els.scene.textContent = q.scene;
     this.els.chapter.textContent = q.chapter;
     this.els.page.textContent = PAGE_NOTE;
@@ -166,9 +166,10 @@ export class QuoteSystem {
       const q = QUOTES[id];
       const div = document.createElement('div');
       div.className = 'journal-entry';
+      const text = q.kind === 'Direct Quote' ? `“${q.text}”` : q.text;
       div.innerHTML =
         `<div class="je-kind">${q.kind}</div>` +
-        `<div class="je-text">\u201C${q.text}\u201D</div>` +
+        `<div class="je-text">${text}</div>` +
         `<div class="je-meta"><b>${q.scene}</b> &middot; ${q.chapter} &middot; ${PAGE_NOTE}<br>${q.meaning}</div>`;
       container.appendChild(div);
     }
