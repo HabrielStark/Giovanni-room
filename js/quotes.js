@@ -1,4 +1,4 @@
-// Quote card data + collectible 3D cards + overlay + journal.
+// Quote/evidence card data + collectible 3D cards + overlay + journal.
 // Citation rule: page numbers must come from the physical class copy of the novel.
 import * as THREE from 'three';
 
@@ -92,7 +92,6 @@ export class QuoteSystem {
 
   get overlayOpen() { return !this.els.overlay.classList.contains('hidden'); }
 
-  // Spawn a floating golden card; ctx = scene context from sceneManager.
   spawn(ctx, id, pos, onCollected) {
     const group = new THREE.Group();
     const cardMat = new THREE.MeshStandardMaterial({
@@ -122,7 +121,7 @@ export class QuoteSystem {
 
     const item = ctx.interactions.add({
       object: group,
-      prompt: 'Collect quote card',
+      prompt: 'Collect evidence card',
       onInteract: () => {
         ctx.interactions.remove(item);
         ctx.scene.remove(group);
@@ -159,7 +158,7 @@ export class QuoteSystem {
   renderJournal(container) {
     container.innerHTML = '';
     if (!this.collected.length) {
-      container.innerHTML = '<div class="journal-empty">No quotes collected yet. Look for the glowing golden cards.</div>';
+      container.innerHTML = '<div class="journal-empty">No evidence cards collected yet. Look for the glowing golden cards.</div>';
       return;
     }
     for (const id of this.collected) {
